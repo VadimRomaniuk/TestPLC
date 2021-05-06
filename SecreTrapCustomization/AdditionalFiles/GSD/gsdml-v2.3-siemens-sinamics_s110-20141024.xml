@@ -1,0 +1,1246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity VendorID="0x002A" DeviceID="0x050E">
+      <InfoText TextId="IDT_FamilyDescription" />
+      <VendorName Value="Siemens AG" />
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="Drives" ProductFamily="SINAMICS" />
+    </DeviceFunction>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="IDD_CU305PN-V4.4" PhysicalSlots="0..2" ModuleIdentNumber="0x00020206" MinDeviceInterval="16" ImplementationType="ERTEC200" DNS_CompatibleName="SINAMICS-S110-CU305PN-V4.4" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="0" SharedDeviceSupported="true" DeviceAccessSupported="true" RequiredSchemaVersion="V2.25" PNIO_Version="V2.2">
+          <ModuleInfo>
+            <Name TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" />
+            <InfoText TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" />
+            <Family MainFamily="Drives" ProductFamily="SINAMICS" />
+            <VendorName Value="Siemens AG" />
+            <OrderNumber Value="6SL3 040-0JA01-0AA0" />
+            <HardwareRelease Value="V1.0" />
+            <SoftwareRelease Value="V4.40" />
+          </ModuleInfo>
+          <CertificationInfo ConformanceClass="C" ApplicationClass="">
+            <ProfileList>
+              <ProfileItem ProfileName="PROFIdrive" />
+              <ProfileItem ProfileName="PROFIsafe" />
+            </ProfileList>
+          </CertificationInfo>
+          <SubslotList>
+            <SubslotItem SubslotNumber="32768" TextId="IDT_SS_IF_CU" />
+            <SubslotItem SubslotNumber="32769" TextId="IDT_SS_P1_CU" />
+            <SubslotItem SubslotNumber="32770" TextId="IDT_SS_P2_CU" />
+          </SubslotList>
+          <IOConfigData MaxInputLength="400" MaxOutputLength="400" />
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="IDM_EMPTY_1" AllowedInSlots="1..2" />
+            <ModuleItemRef ModuleItemTarget="IDM_SERVO" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_CU" AllowedInSlots="2" />
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_DAP_CU305PN-V4.4" SubmoduleIdentNumber="0x00000002">
+              <IOData IOPS_Length="1" IOCS_Length="1" />
+              <ModuleInfo>
+                <Name TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" />
+                <InfoText TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IDS_IF_CU305PN-V4.4" SubmoduleIdentNumber="0x00000003" SubslotNumber="32768" TextId="IDT_ISM_CU" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SupportedRT_Classes="RT_CLASS_1;RT_CLASS_2;RT_CLASS_3" IsochroneModeInRT_Classes="RT_CLASS_3" IsochroneModeSupported="true">
+              <RT_Class3Properties MaxBridgeDelay="2920" MaxNumberIR_FrameData="130" />
+              <SynchronisationMode SupportedRole="SyncSlave" MaxLocalJitter="50" T_PLL_MAX="1000" SupportedSyncProtocols="PTCP" />
+              <ApplicationRelations NumberOfAR="2">
+                <TimingProperties SendClock="16 32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+                <RT_Class3TimingProperties SendClock="16 24 32 40 48 56 64 72 80 88 96 104 112 120 128" ReductionRatio="1" />
+              </ApplicationRelations>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="IDS_P1_CU305PN-V4.4" SubmoduleIdentNumber="0x00000004" TextId="IDT_PORT1" SubslotNumber="32769" MaxPortRxDelay="374" MaxPortTxDelay="280" LinkStateDiagnosisCapability="Up+Down" />
+            <PortSubmoduleItem ID="IDS_P2_CU305PN-V4.4" SubmoduleIdentNumber="0x00000005" TextId="IDT_PORT2" SubslotNumber="32770" MaxPortRxDelay="374" MaxPortTxDelay="280" LinkStateDiagnosisCapability="Up+Down" />
+          </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="IDGR_DEVICE" />
+          </Graphics>
+        </DeviceAccessPointItem>
+        <DeviceAccessPointItem ID="IDD_CU305PN-V4.4HF" PhysicalSlots="0..2" ModuleIdentNumber="0x00020207" MinDeviceInterval="16" ImplementationType="ERTEC200" DNS_CompatibleName="SINAMICS-S110-CU305PN-V4.4HF" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="0" SharedDeviceSupported="true" DeviceAccessSupported="true" RequiredSchemaVersion="V2.3" PNIO_Version="V2.2" MultipleWriteSupported="true">
+          <ModuleInfo>
+            <Name TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" />
+            <InfoText TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" />
+            <Family MainFamily="Drives" ProductFamily="SINAMICS" />
+            <VendorName Value="Siemens AG" />
+            <OrderNumber Value="6SL3 040-0JA01-0AA0" />
+            <HardwareRelease Value="V1.0" />
+            <SoftwareRelease Value="V4.40" />
+          </ModuleInfo>
+          <CertificationInfo ConformanceClass="C" ApplicationClass="">
+            <ProfileList>
+              <ProfileItem ProfileName="PROFIdrive" />
+              <ProfileItem ProfileName="PROFIsafe" />
+            </ProfileList>
+          </CertificationInfo>
+          <SubslotList>
+            <SubslotItem SubslotNumber="32768" TextId="IDT_SS_IF_CU" />
+            <SubslotItem SubslotNumber="32769" TextId="IDT_SS_P1_CU" />
+            <SubslotItem SubslotNumber="32770" TextId="IDT_SS_P2_CU" />
+          </SubslotList>
+          <IOConfigData MaxInputLength="400" MaxOutputLength="400" />
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="IDM_EMPTY_1" AllowedInSlots="1..2" />
+            <ModuleItemRef ModuleItemTarget="IDM_SERVO" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_CU" AllowedInSlots="2" />
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_DAP_CU305PN-V4.4HF" SubmoduleIdentNumber="0x00000002">
+              <IOData IOPS_Length="1" IOCS_Length="1" />
+              <ModuleInfo>
+                <Name TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" />
+                <InfoText TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IDS_IF_CU305PN-V4.4HF" SubmoduleIdentNumber="0x00000003" SubslotNumber="32768" TextId="IDT_ISM_CU" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SupportedRT_Classes="RT_CLASS_1;RT_CLASS_2;RT_CLASS_3" IsochroneModeInRT_Classes="RT_CLASS_3" IsochroneModeSupported="true">
+              <RT_Class3Properties MaxBridgeDelay="2920" MaxNumberIR_FrameData="130" StartupMode="Legacy;Advanced" />
+              <SynchronisationMode SupportedRole="SyncSlave" MaxLocalJitter="50" T_PLL_MAX="1000" SupportedSyncProtocols="PTCP" />
+              <ApplicationRelations NumberOfAR="2">
+                <TimingProperties SendClock="16 32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+                <RT_Class3TimingProperties SendClock="16 24 32 40 48 56 64 72 80 88 96 104 112 120 128" ReductionRatio="1" />
+              </ApplicationRelations>
+              <MediaRedundancy SupportedRole="Client" MRPD_Supported="true" />
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="IDS_P1_CU305PN-V4.4HF" SubmoduleIdentNumber="0x00000004" TextId="IDT_PORT1" SubslotNumber="32769" MaxPortRxDelay="374" MaxPortTxDelay="280" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="true" MAUTypes="16" IsDefaultRingport="true" />
+            <PortSubmoduleItem ID="IDS_P2_CU305PN-V4.4HF" SubmoduleIdentNumber="0x00000005" TextId="IDT_PORT2" SubslotNumber="32770" MaxPortRxDelay="374" MaxPortTxDelay="280" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="true" MAUTypes="16" IsDefaultRingport="true" />
+          </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="IDGR_DEVICE" />
+          </Graphics>
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+      <ModuleList>
+        <ModuleItem ID="IDM_EMPTY_1" ModuleIdentNumber="0x00010000" PhysicalSubslots="1">
+          <ModuleInfo>
+            <Name TextId="IDT_MOD_NAME_EMPTY" />
+            <InfoText TextId="IDT_MOD_INFO_EMPTY" />
+          </ModuleInfo>
+          <UseableSubmodules>
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_MAP" AllowedInSubslots="1" FixedInSubslots="1" />
+          </UseableSubmodules>
+        </ModuleItem>
+        <ModuleItem ID="IDM_SERVO" ModuleIdentNumber="0x000100B0" PhysicalSubslots="1 2 3 4">
+          <ModuleInfo>
+            <Name TextId="IDT_MOD_NAME_SERVO" />
+            <InfoText TextId="IDT_MOD_INFO_SERVO" />
+          </ModuleInfo>
+          <UseableSubmodules>
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_MAP" AllowedInSubslots="1" FixedInSubslots="1" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_EMPTY" AllowedInSubslots="2 3 4" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_PS30" AllowedInSubslots="2" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL1" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL2" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL3" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL4" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL7" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL9" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL102" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL103" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL110" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL111" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL997" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL999" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL700" AllowedInSubslots="4" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_ADD22" AllowedInSubslots="4" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_ADD24" AllowedInSubslots="4" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_ADD26" AllowedInSubslots="4" />
+          </UseableSubmodules>
+        </ModuleItem>
+        <ModuleItem ID="IDM_CU" ModuleIdentNumber="0x00010090" PhysicalSubslots="1 2 3">
+          <ModuleInfo>
+            <Name TextId="IDT_MOD_NAME_CU" />
+            <InfoText TextId="IDT_MOD_INFO_CU" />
+          </ModuleInfo>
+          <UseableSubmodules>
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_MAP" AllowedInSubslots="1" FixedInSubslots="1" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_NOSAFE" AllowedInSubslots="2" FixedInSubslots="2" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_EMPTY" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL390" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL391" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL392" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL393" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL394" AllowedInSubslots="3" />
+            <SubmoduleItemRef SubmoduleItemTarget="IDS_TEL996" AllowedInSubslots="3" />
+          </UseableSubmodules>
+        </ModuleItem>
+      </ModuleList>
+      <SubmoduleList>
+        <SubmoduleItem ID="IDS_MAP" SubmoduleIdentNumber="0x0000FFFF" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1" />
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_MAP" />
+            <InfoText TextId="IDT_SM_INFO_MAP" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_EMPTY" SubmoduleIdentNumber="0x00001388" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1" />
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_EMPTY" />
+            <InfoText TextId="IDT_SM_INFO_EMPTY" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_NOSAFE" SubmoduleIdentNumber="0x00001389" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1" />
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_NOSAFE" />
+            <InfoText TextId="IDT_SM_INFO_NOSAFE" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_PS30" SubmoduleIdentNumber="0x0000001E" API="14848" PROFIsafeSupported="1">
+          <IOData F_IO_StructureDescCRC="5639">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned8" UseAsBits="true" TextId="IDT_DATAITEM_SAFETY_INPUT" />
+              <DataItem DataType="Unsigned8" UseAsBits="true" TextId="IDT_DATAITEM_SAFETY_INPUT" />
+              <DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DATAITEM_SAFETY_TRAILER" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned8" UseAsBits="true" TextId="IDT_DATAITEM_SAFETY_OUTPUT" />
+              <DataItem DataType="Unsigned8" UseAsBits="true" TextId="IDT_DATAITEM_SAFETY_OUTPUT" />
+              <DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DATAITEM_SAFETY_TRAILER" />
+            </Output>
+          </IOData>
+          <RecordDataList>
+            <F_ParameterRecordDataItem F_ParamDescCRC="21515" Index="256">
+              <F_Check_iPar />
+              <F_SIL DefaultValue="SIL2" AllowedValues="SIL2" Visible="true" Changeable="false" />
+              <F_CRC_Length DefaultValue="3-Byte-CRC" AllowedValues="3-Byte-CRC" Visible="true" Changeable="false" />
+              <F_Block_ID DefaultValue="0" AllowedValues="0" Visible="false" Changeable="false" />
+              <F_Par_Version />
+              <F_Source_Add AllowedValues="1..65534" />
+              <F_Dest_Add AllowedValues="1..65534" />
+              <F_WD_Time DefaultValue="250" AllowedValues="10..65535" />
+              <F_Par_CRC DefaultValue="57001" />
+            </F_ParameterRecordDataItem>
+          </RecordDataList>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_PS30" />
+            <InfoText TextId="IDT_SM_INFO_PS30" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL1" SubmoduleIdentNumber="0x00000001" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL1" />
+            <InfoText TextId="IDT_SM_INFO_TEL1" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL2" SubmoduleIdentNumber="0x00000002" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL2" />
+            <InfoText TextId="IDT_SM_INFO_TEL2" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL3" SubmoduleIdentNumber="0x00000003" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL3" />
+            <InfoText TextId="IDT_SM_INFO_TEL3" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL4" SubmoduleIdentNumber="0x00000004" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL4" />
+            <InfoText TextId="IDT_SM_INFO_TEL4" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL7" SubmoduleIdentNumber="0x00000007" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL7" />
+            <InfoText TextId="IDT_SM_INFO_TEL7" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL9" SubmoduleIdentNumber="0x00000009" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL9" />
+            <InfoText TextId="IDT_SM_INFO_TEL9" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL102" SubmoduleIdentNumber="0x00000066" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL102" />
+            <InfoText TextId="IDT_SM_INFO_TEL102" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL103" SubmoduleIdentNumber="0x00000067" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL103" />
+            <InfoText TextId="IDT_SM_INFO_TEL103" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL110" SubmoduleIdentNumber="0x0000006E" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL110" />
+            <InfoText TextId="IDT_SM_INFO_TEL110" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL111" SubmoduleIdentNumber="0x0000006F" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL111" />
+            <InfoText TextId="IDT_SM_INFO_TEL111" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL390" SubmoduleIdentNumber="0x00000186" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL390" />
+            <InfoText TextId="IDT_SM_INFO_TEL390" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL391" SubmoduleIdentNumber="0x00000187" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL391" />
+            <InfoText TextId="IDT_SM_INFO_TEL391" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL392" SubmoduleIdentNumber="0x00000188" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL392" />
+            <InfoText TextId="IDT_SM_INFO_TEL392" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL393" SubmoduleIdentNumber="0x00000189" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL393" />
+            <InfoText TextId="IDT_SM_INFO_TEL393" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL394" SubmoduleIdentNumber="0x0000018A" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL394" />
+            <InfoText TextId="IDT_SM_INFO_TEL394" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL996" SubmoduleIdentNumber="0x000003E4" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL996" />
+            <InfoText TextId="IDT_SM_INFO_TEL996" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL997" SubmoduleIdentNumber="0x000003E5" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL997" />
+            <InfoText TextId="IDT_SM_INFO_TEL997" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL999" SubmoduleIdentNumber="0x000003E7" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL999" />
+            <InfoText TextId="IDT_SM_INFO_TEL999" />
+          </ModuleInfo>
+          <IsochroneMode T_DC_Base="8" T_DC_Min="4" T_DC_Max="16" T_IO_Base="250000" T_IO_InputMin="2" T_IO_OutputMin="1" />
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_TEL700" SubmoduleIdentNumber="0x000002BC" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL700" />
+            <InfoText TextId="IDT_SM_INFO_TEL700" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_ADD22" SubmoduleIdentNumber="0x000003CA" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL970" />
+            <InfoText TextId="IDT_SM_INFO_TEL970" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_ADD24" SubmoduleIdentNumber="0x000003CB" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL971" />
+            <InfoText TextId="IDT_SM_INFO_TEL971" />
+          </ModuleInfo>
+        </SubmoduleItem>
+        <SubmoduleItem ID="IDS_ADD26" SubmoduleIdentNumber="0x000003CC" API="14848">
+          <IOData IOPS_Length="1" IOCS_Length="1">
+            <Input Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_ACTVAL" />
+            </Input>
+            <Output Consistency="All items consistency">
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+              <DataItem DataType="Unsigned16" TextId="IDT_DATAITEM_REFVAL" />
+            </Output>
+          </IOData>
+          <ModuleInfo>
+            <Name TextId="IDT_SM_NAME_TEL972" />
+            <InfoText TextId="IDT_SM_INFO_TEL972" />
+          </ModuleInfo>
+        </SubmoduleItem>
+      </SubmoduleList>
+      <GraphicsList>
+        <GraphicItem ID="IDGR_DEVICE" GraphicFile="gsdml-002A-050E-S110" />
+      </GraphicsList>
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <Text TextId="IDT_MOD_NAME_EMPTY" Value="DO without PZD" />
+          <Text TextId="IDT_MOD_INFO_EMPTY" Value="Drive object (DO) without cyclic PZD" />
+          <Text TextId="IDT_MOD_NAME_SERVO" Value="DO Servo" />
+          <Text TextId="IDT_MOD_INFO_SERVO" Value="Drive object (DO) Servo" />
+          <Text TextId="IDT_MOD_NAME_CU" Value="DO Control Unit" />
+          <Text TextId="IDT_MOD_INFO_CU" Value="Drive object (DO) Control Unit SINAMICS S" />
+          <Text TextId="IDT_SM_NAME_PAP" Value="Parameter Access Point" />
+          <Text TextId="IDT_SM_INFO_PAP" Value="Access point to the parameters of the drive object (DO)" />
+          <Text TextId="IDT_SM_NAME_MAP" Value="Module Access Point:" />
+          <Text TextId="IDT_SM_INFO_MAP" Value="Module Access Point:" />
+          <Text TextId="IDT_SM_NAME_EMPTY" Value="Empty submodule" />
+          <Text TextId="IDT_SM_INFO_EMPTY" Value="Empty submodule" />
+          <Text TextId="IDT_SM_NAME_NOSAFE" Value="without PROFIsafe" />
+          <Text TextId="IDT_SM_INFO_NOSAFE" Value="Empty submodule" />
+          <Text TextId="IDT_SM_NAME_PS30" Value="PROFIsafe telegr 30" />
+          <Text TextId="IDT_SM_INFO_PS30" Value="PROFIsafe standard telegram 30: F-DI/DO length 2/2 bytes" />
+          <Text TextId="IDT_DATAITEM_SAFETY_TRAILER" Value="Safety" />
+          <Text TextId="IDT_DATAITEM_SAFETY_INPUT" Value="Safety In" />
+          <Text TextId="IDT_DATAITEM_SAFETY_OUTPUT" Value="Safety Out" />
+          <Text TextId="IDT_SM_NAME_TEL1" Value="Standard telegram 1, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL1" Value="Standard telegram 1: Closed-loop speed control, PZD length 2/2 words" />
+          <Text TextId="IDT_SM_NAME_TEL2" Value="Standard telegram 2, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL2" Value="Standard telegram 2: Closed-loop speed control, PZD length 4/4 words" />
+          <Text TextId="IDT_SM_NAME_TEL3" Value="Standard telegram 3, PZD-5/9" />
+          <Text TextId="IDT_SM_INFO_TEL3" Value="Standard telegram 3: Closed-loop speed control plus 1 position encoder, PZD length 5/9 words" />
+          <Text TextId="IDT_SM_NAME_TEL4" Value="Standard telegram 4, PZD-6/14" />
+          <Text TextId="IDT_SM_INFO_TEL4" Value="Standard telegram 4: Closed-loop speed control plus 2 position encoders, PZD length 6/14 words" />
+          <Text TextId="IDT_SM_NAME_TEL7" Value="Standard telegram 7, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL7" Value="Standard telegram 7: Positioning, PZD length 2/2 words" />
+          <Text TextId="IDT_SM_NAME_TEL9" Value="Standard telegram 9, PZD-10/5" />
+          <Text TextId="IDT_SM_INFO_TEL9" Value="Standard telegram 9: Positioning, PZD length 10/5 words" />
+          <Text TextId="IDT_SM_NAME_TEL102" Value="SIEMENS telegram 102, PZD-6/10" />
+          <Text TextId="IDT_SM_INFO_TEL102" Value="SIEMENS telegram 102: Closed-loop speed control with torque reduction, 1 position encoder, PZD length 6/10 words" />
+          <Text TextId="IDT_SM_NAME_TEL103" Value="SIEMENS telegram 103, PZD-7/15" />
+          <Text TextId="IDT_SM_INFO_TEL103" Value="SIEMENS telegram 103: Closed-loop speed control with torque reduction, 2 position encoders, PZD length 7/15 words" />
+          <Text TextId="IDT_SM_NAME_TEL110" Value="SIEMENS telegram 110, PZD-12/7" />
+          <Text TextId="IDT_SM_INFO_TEL110" Value="SIEMENS telegram 110: Positioning, PZD length 12/7 words" />
+          <Text TextId="IDT_SM_NAME_TEL111" Value="SIEMENS telegram 111, PZD-12/12" />
+          <Text TextId="IDT_SM_INFO_TEL111" Value="SIEMENS telegram 111: Positioning, incl. MDI, PZD length 12/12 words" />
+          <Text TextId="IDT_SM_NAME_TEL390" Value="SIEMENS telegram 390, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL390" Value="SIEMENS telegram 390 for device I/O, PZD length 2/2 words" />
+          <Text TextId="IDT_SM_NAME_TEL391" Value="SIEMENS telegram 391, PZD-3/7" />
+          <Text TextId="IDT_SM_INFO_TEL391" Value="SIEMENS telegram 391 for device I/O, 2 measuring probes, PZD length 3/7 words" />
+          <Text TextId="IDT_SM_NAME_TEL392" Value="SIEMENS telegram 392, PZD-3/15" />
+          <Text TextId="IDT_SM_INFO_TEL392" Value="SIEMENS telegram 392 for device I/O, 6 measuring probes, PZD length 3/15 words" />
+          <Text TextId="IDT_SM_NAME_TEL393" Value="SIEMENS telegram 393, PZD-4/21" />
+          <Text TextId="IDT_SM_INFO_TEL393" Value="SIEMENS telegram 393 for device I/O, 8 measuring probes, PZD length 4/21 words" />
+          <Text TextId="IDT_SM_NAME_TEL394" Value="SIEMENS telegram 394, PZD-3/3" />
+          <Text TextId="IDT_SM_INFO_TEL394" Value="SIEMENS telegram 394 for device I/O, PZD length 3/3 words" />
+          <Text TextId="IDT_SM_NAME_TEL996" Value="Free telegram, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL996" Value="Free telegram, PZD length 4/4 words" />
+          <Text TextId="IDT_SM_NAME_TEL997" Value="Free telegram, PZD-8/8" />
+          <Text TextId="IDT_SM_INFO_TEL997" Value="Free telegram, PZD length 8/8 words" />
+          <Text TextId="IDT_SM_NAME_TEL999" Value="Free telegram, PZD-16/16" />
+          <Text TextId="IDT_SM_INFO_TEL999" Value="Free telegram, PZD length 16/16 words" />
+          <Text TextId="IDT_SM_NAME_TEL700" Value="Supplementary data, safety information channel, PZD-0/3" />
+          <Text TextId="IDT_SM_INFO_TEL700" Value="Supplementary data, safety information channel, PZD length 0/3 words" />
+          <Text TextId="IDT_SM_NAME_TEL970" Value="Supplementary data, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL970" Value="Supplementary data, PZD length 2/2 words" />
+          <Text TextId="IDT_SM_NAME_TEL971" Value="Supplementary data, PZD-2/4" />
+          <Text TextId="IDT_SM_INFO_TEL971" Value="Supplementary data, PZD length 2/4 words" />
+          <Text TextId="IDT_SM_NAME_TEL972" Value="Supplementary data, PZD-2/6" />
+          <Text TextId="IDT_SM_INFO_TEL972" Value="Supplementary data, PZD length 2/6 words" />
+          <Text TextId="IDT_DATAITEM_ACTVAL" Value="Status word or actual value" />
+          <Text TextId="IDT_DATAITEM_REFVAL" Value="Control word or setpoint" />
+          <Text TextId="IDT_FamilyDescription" Value="SINAMICS, the unified family of drives with scalable performance, from the chassis to the cabinet unit in a power range from 120 W to several MW." />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" Value="SINAMICS S110 CU305 PN V4.4" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" Value="IO device SINAMICS S110 CU305 PN V4.4 with PROFINET-IO interface (RT, IRT and non-cyclic communications, clock cycle synchronization, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" Value="SINAMICS S110 CU305 PN V4.4HF/SP3" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" Value="IO device SINAMICS S110 CU305 PN V4.4HF/SP3 with PROFINET-IO interface (RT, IRT and non-cyclic communications, clock cycle synchronization, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_PORT1" Value="Port 1" />
+          <Text TextId="IDT_PORT2" Value="Port 2" />
+          <Text TextId="IDT_PORT3" Value="Port 3" />
+          <Text TextId="IDT_PORT4" Value="Port 4" />
+          <Text TextId="IDT_ISM_CU" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU" Value="X150" />
+          <Text TextId="IDT_SS_P1_CU" Value="X150 P1" />
+          <Text TextId="IDT_SS_P2_CU" Value="X150 P2" />
+          <Text TextId="IDT_ISM_CBE" Value="CBE20-PN-IO" />
+          <Text TextId="IDT_SS_IF_CBE" Value="X1400" />
+          <Text TextId="IDT_SS_P1_CBE" Value="X1400 P1" />
+          <Text TextId="IDT_SS_P2_CBE" Value="X1400 P2" />
+          <Text TextId="IDT_SS_P3_CBE" Value="X1400 P3" />
+          <Text TextId="IDT_SS_P4_CBE" Value="X1400 P4" />
+          <Text TextId="IDT_ISM_CU310" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU310" Value="X200" />
+          <Text TextId="IDT_SS_P1_CU310" Value="X200 P1" />
+          <Text TextId="IDT_SS_P2_CU310" Value="X201 P2" />
+        </PrimaryLanguage>
+        <Language xml:lang="de">
+          <Text TextId="IDT_MOD_NAME_EMPTY" Value="DO ohne PZD" />
+          <Text TextId="IDT_MOD_INFO_EMPTY" Value="Antriebsobjekt (DO) ohne zyklische PZD" />
+          <Text TextId="IDT_MOD_NAME_SERVO" Value="DO Servo" />
+          <Text TextId="IDT_MOD_INFO_SERVO" Value="Antriebsobjekt (DO) Servo" />
+          <Text TextId="IDT_MOD_NAME_CU" Value="DO Control Unit" />
+          <Text TextId="IDT_MOD_INFO_CU" Value="Antriebsobjekt (DO) Control Unit SINAMICS S" />
+          <Text TextId="IDT_SM_NAME_PAP" Value="Parameter Access Point" />
+          <Text TextId="IDT_SM_INFO_PAP" Value="Zugangspunkt auf die Parameter des Antriebsobjektes (DO)" />
+          <Text TextId="IDT_SM_NAME_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_INFO_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_NAME_EMPTY" Value="leeres Submodul" />
+          <Text TextId="IDT_SM_INFO_EMPTY" Value="leeres Submodul" />
+          <Text TextId="IDT_SM_NAME_NOSAFE" Value="ohne PROFIsafe" />
+          <Text TextId="IDT_SM_INFO_NOSAFE" Value="leeres Submodul" />
+          <Text TextId="IDT_SM_NAME_PS30" Value="PROFIsafe Telegr 30" />
+          <Text TextId="IDT_SM_INFO_PS30" Value="PROFIsafe Standard Telegramm 30: F-DI/DO-Länge 2/2 Byte" />
+          <Text TextId="IDT_DATAITEM_SAFETY_TRAILER" Value="Safety" />
+          <Text TextId="IDT_DATAITEM_SAFETY_INPUT" Value="Safety In" />
+          <Text TextId="IDT_DATAITEM_SAFETY_OUTPUT" Value="Safety Out" />
+          <Text TextId="IDT_SM_NAME_TEL1" Value="Standard Telegramm 1, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL1" Value="Standard Telegramm 1: Drehzahlregelung, PZD-Länge 2/2 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL2" Value="Standard Telegramm 2, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL2" Value="Standard Telegramm 2: Drehzahlregelung, PZD-Länge 4/4 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL3" Value="Standard Telegramm 3, PZD-5/9" />
+          <Text TextId="IDT_SM_INFO_TEL3" Value="Standard Telegramm 3: Drehzahlregelung plus 1 Lagegeber, PZD-Länge 5/9 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL4" Value="Standard Telegramm 4, PZD-6/14" />
+          <Text TextId="IDT_SM_INFO_TEL4" Value="Standard Telegramm 4: Drehzahlregelung plus 2 Lagegeber, PZD-Länge 6/14 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL7" Value="Standard Telegramm 7, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL7" Value="Standard Telegramm 7: Positionieren, PZD-Länge 2/2 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL9" Value="Standard Telegramm 9, PZD-10/5" />
+          <Text TextId="IDT_SM_INFO_TEL9" Value="Standard Telegramm 9: Positionieren, PZD-Länge 10/5 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL102" Value="SIEMENS Telegramm 102, PZD-6/10" />
+          <Text TextId="IDT_SM_INFO_TEL102" Value="SIEMENS Telegramm 102: Drehzahlregelung mit Momentenreduzierung, 1 Lagegeber, PZD-Länge 6/10 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL103" Value="SIEMENS Telegramm 103, PZD-7/15" />
+          <Text TextId="IDT_SM_INFO_TEL103" Value="SIEMENS Telegramm 103: Drehzahlregelung mit Momentenreduzierung, 2 Lagegeber, PZD-Länge 7/15 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL110" Value="SIEMENS Telegramm 110, PZD-12/7" />
+          <Text TextId="IDT_SM_INFO_TEL110" Value="SIEMENS Telegramm 110: Positionieren, PZD-Länge 12/7 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL111" Value="SIEMENS Telegramm 111, PZD-12/12" />
+          <Text TextId="IDT_SM_INFO_TEL111" Value="SIEMENS Telegramm 111: Positionieren inkl. MDI, PZD-Länge 12/12 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL390" Value="SIEMENS Telegramm 390, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL390" Value="SIEMENS Telegramm 390 für Device-I/O, PZD-Länge 2/2 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL391" Value="SIEMENS Telegramm 391, PZD-3/7" />
+          <Text TextId="IDT_SM_INFO_TEL391" Value="SIEMENS Telegramm 391 für Device-I/O, 2 Messtaster, PZD-Länge 3/7 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL392" Value="SIEMENS Telegramm 392, PZD-3/15" />
+          <Text TextId="IDT_SM_INFO_TEL392" Value="SIEMENS Telegramm 392 für Device-I/O, 6 Messtaster, PZD-Länge 3/15 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL393" Value="SIEMENS Telegramm 393, PZD-4/21" />
+          <Text TextId="IDT_SM_INFO_TEL393" Value="SIEMENS Telegramm 393 für Device-I/O, 8 Messtaster, PZD-Länge 4/21 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL394" Value="SIEMENS Telegramm 394, PZD-3/3" />
+          <Text TextId="IDT_SM_INFO_TEL394" Value="SIEMENS Telegramm 394 für Device-I/O, PZD-Länge 3/3 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL996" Value="Freies Telegramm, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL996" Value="Freies Telegramm, PZD-Länge 4/4 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL997" Value="Freies Telegramm, PZD-8/8" />
+          <Text TextId="IDT_SM_INFO_TEL997" Value="Freies Telegramm, PZD-Länge 8/8 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL999" Value="Freies Telegramm, PZD-16/16" />
+          <Text TextId="IDT_SM_INFO_TEL999" Value="Freies Telegramm, PZD-Länge 16/16 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL700" Value="Zusatzdaten, Safety Info Channel, PZD-0/3" />
+          <Text TextId="IDT_SM_INFO_TEL700" Value="Zusatzdaten, Safety Info Channel, PZD-Länge 0/3 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL970" Value="Zusatzdaten, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL970" Value="Zusatzdaten, PZD-Länge 2/2 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL971" Value="Zusatzdaten, PZD-2/4" />
+          <Text TextId="IDT_SM_INFO_TEL971" Value="Zusatzdaten, PZD-Länge 2/4 Worte" />
+          <Text TextId="IDT_SM_NAME_TEL972" Value="Zusatzdaten, PZD-2/6" />
+          <Text TextId="IDT_SM_INFO_TEL972" Value="Zusatzdaten, PZD-Länge 2/6 Worte" />
+          <Text TextId="IDT_DATAITEM_ACTVAL" Value="Zustandswort oder Istwert" />
+          <Text TextId="IDT_DATAITEM_REFVAL" Value="Steuerwort oder Sollwert" />
+          <Text TextId="IDT_FamilyDescription" Value="SINAMICS, die durchgängige Antriebs-Familie mit skalierbarer Performance, vom Einbaugerät bis hin zum Schrankgerät in einem Leistungsbereich von 120 W bis mehrere MW" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" Value="SINAMICS S110 CU305 PN V4.4" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" Value="IO-Device SINAMICS S110 CU305 PN V4.4 mit PROFINET-IO-Schnittstelle (RT-, IRT- und azyklische Kommunikation, Taktsynchronisation, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" Value="SINAMICS S110 CU305 PN V4.4HF/SP3" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" Value="IO-Device SINAMICS S110 CU305 PN V4.4HF/SP3 mit PROFINET-IO-Schnittstelle (RT-, IRT- und azyklische Kommunikation, Taktsynchronisation, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_PORT1" Value="Port 1" />
+          <Text TextId="IDT_PORT2" Value="Port 2" />
+          <Text TextId="IDT_ISM_CU" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU" Value="X150" />
+          <Text TextId="IDT_SS_P1_CU" Value="X150 P1" />
+          <Text TextId="IDT_SS_P2_CU" Value="X150 P2" />
+        </Language>
+        <Language xml:lang="es">
+          <Text TextId="IDT_MOD_NAME_EMPTY" Value="DO sin PZD" />
+          <Text TextId="IDT_MOD_INFO_EMPTY" Value="Objeto de accionamiento (DO) sin PZD cíclico" />
+          <Text TextId="IDT_MOD_NAME_SERVO" Value="DO Servo" />
+          <Text TextId="IDT_MOD_INFO_SERVO" Value="Objeto de accionamiento (DO) Servo" />
+          <Text TextId="IDT_MOD_NAME_CU" Value="DO Control Unit" />
+          <Text TextId="IDT_MOD_INFO_CU" Value="Objeto de accionamiento (DO) Control Unit SINAMICS S" />
+          <Text TextId="IDT_SM_NAME_PAP" Value="Punto de acceso a parámetros" />
+          <Text TextId="IDT_SM_INFO_PAP" Value="Punto de acceso a los parámetros del objeto de accionamiento (DO)" />
+          <Text TextId="IDT_SM_NAME_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_INFO_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_NAME_EMPTY" Value="Submódulo vacío" />
+          <Text TextId="IDT_SM_INFO_EMPTY" Value="Submódulo vacío" />
+          <Text TextId="IDT_SM_NAME_NOSAFE" Value="sin PROFIsafe" />
+          <Text TextId="IDT_SM_INFO_NOSAFE" Value="Submódulo vacío" />
+          <Text TextId="IDT_SM_NAME_PS30" Value="PROFIsafe Telegr 30" />
+          <Text TextId="IDT_SM_INFO_PS30" Value="Telegrama estándar PROFIsafe 30: Long. F-DI/DO 2/2 bytes" />
+          <Text TextId="IDT_DATAITEM_SAFETY_TRAILER" Value="Safety" />
+          <Text TextId="IDT_DATAITEM_SAFETY_INPUT" Value="Safety In" />
+          <Text TextId="IDT_DATAITEM_SAFETY_OUTPUT" Value="Safety Out" />
+          <Text TextId="IDT_SM_NAME_TEL1" Value="Telegrama estándar 1, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL1" Value="Telegrama estándar 1: regulación de velocidad, longitud PZD 2/2 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL2" Value="Telegrama estándar 2, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL2" Value="Telegrama estándar 2: regulación de velocidad, longitud PZD 4/4 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL3" Value="Telegrama estándar 3, PZD-5/9" />
+          <Text TextId="IDT_SM_INFO_TEL3" Value="Telegrama estándar 3: regulación de velocidad más 1 encóder de posición, longitud PZD 5/9 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL4" Value="Telegrama estándar 4, PZD-6/14" />
+          <Text TextId="IDT_SM_INFO_TEL4" Value="Telegrama estándar 4: regulación de velocidad más 2 encóder de posición, longitud PZD 6/14 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL7" Value="Telegrama estándar 7, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL7" Value="Telegrama estándar 7: posicionamiento, longitud PZD 2/2 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL9" Value="Telegrama estándar 9, PZD-10/5" />
+          <Text TextId="IDT_SM_INFO_TEL9" Value="Telegrama estándar 9: posicionamiento, longitud PZD 10/5 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL102" Value="Telegrama SIEMENS 102, PZD-6/10" />
+          <Text TextId="IDT_SM_INFO_TEL102" Value="Telegrama SIEMENS 102: regulación de velocidad con reducción de par, 1 encóders de posición, longitud PZD 6/10 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL103" Value="Telegrama SIEMENS 103, PZD-7/15" />
+          <Text TextId="IDT_SM_INFO_TEL103" Value="Telegrama SIEMENS 103: regulación de velocidad con reducción de par, 2 encóders de posición, longitud PZD 7/15 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL110" Value="Telegrama SIEMENS 110, PZD-12/7" />
+          <Text TextId="IDT_SM_INFO_TEL110" Value="Telegrama SIEMENS 110: posicionamiento, longitud PZD 12/7 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL111" Value="Telegrama SIEMENS 111, PZD-12/12" />
+          <Text TextId="IDT_SM_INFO_TEL111" Value="Telegrama SIEMENS 111: posicionamiento incl. MDI, long. PZD 12/12 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL390" Value="Telegrama SIEMENS 390, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL390" Value="Telegrama SIEMENS 390 para Device-I/O, longitud 2/2 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL391" Value="Telegrama SIEMENS 391, PZD-3/7" />
+          <Text TextId="IDT_SM_INFO_TEL391" Value="Telegrama SIEMENS 391 para Device-I/O, 2 detectores, longitud 3/7 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL392" Value="Telegrama SIEMENS 392, PZD-3/15" />
+          <Text TextId="IDT_SM_INFO_TEL392" Value="Telegrama SIEMENS 392 para Device-I/O, 6 detectores, longitud 3/15 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL393" Value="Telegrama SIEMENS 393, PZD-4/21" />
+          <Text TextId="IDT_SM_INFO_TEL393" Value="Telegrama SIEMENS 393 para Device-I/O, 8 detectores, longitud 4/21 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL394" Value="Telegrama SIEMENS 394, PZD-3/3" />
+          <Text TextId="IDT_SM_INFO_TEL394" Value="Telegrama SIEMENS 394 para Device-I/O, longitud 3/3 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL996" Value="Telegrama libre, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL996" Value="Telegrama libre, longitud PZD 4/4 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL997" Value="Telegrama libre, PZD-8/8" />
+          <Text TextId="IDT_SM_INFO_TEL997" Value="Telegrama libre, longitud PZD 8/8 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL999" Value="Telegrama libre, PZD-16/16" />
+          <Text TextId="IDT_SM_INFO_TEL999" Value="Telegrama libre, longitud PZD 16/16 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL700" Value="Datos adicionales, Safety Info Channel, PZD-0/3" />
+          <Text TextId="IDT_SM_INFO_TEL700" Value="Datos adicionales, Safety Info Channel, longitud PZD 0/3 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL970" Value="Datos adicionales, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL970" Value="Datos adicionales, longitud PZD 2/2 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL971" Value="Datos adicionales, PZD-2/4" />
+          <Text TextId="IDT_SM_INFO_TEL971" Value="Datos adicionales, longitud PZD 2/4 palabras" />
+          <Text TextId="IDT_SM_NAME_TEL972" Value="Datos adicionales, PZD-2/6" />
+          <Text TextId="IDT_SM_INFO_TEL972" Value="Datos adicionales, longitud PZD 2/6 palabras" />
+          <Text TextId="IDT_DATAITEM_ACTVAL" Value="Palabra de estado o valor real" />
+          <Text TextId="IDT_DATAITEM_REFVAL" Value="Palabra de mando o consigna" />
+          <Text TextId="IDT_FamilyDescription" Value="SINAMICS, la familia unificada de accionamientos con rendimiento escalable, del variador tipo bloque al convertidor en armario, cubriendo un rango de potencia desde 120 W hasta varios MW" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" Value="SINAMICS S110 CU305 PN V4.4" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" Value="IO-Device SINAMICS S110 CU305 PN V4.4HF con interfaz PROFINET-IO (comunicación RT, IRT y acíclica, modo isócrono, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" Value="SINAMICS S110 CU305 PN V4.4HF/SP3" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" Value="IO-Device SINAMICS S110 CU305 PN V4.4HF/SP3 con interfaz PROFINET-IO (comunicación RT, IRT y acíclica, modo isócrono, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_PORT1" Value="Puerto 1" />
+          <Text TextId="IDT_PORT2" Value="Puerto 2" />
+          <Text TextId="IDT_PORT3" Value="Puerto 3" />
+          <Text TextId="IDT_PORT4" Value="Puerto 4" />
+          <Text TextId="IDT_ISM_CU" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU" Value="X150" />
+          <Text TextId="IDT_SS_P1_CU" Value="X150 P1" />
+          <Text TextId="IDT_SS_P2_CU" Value="X150 P2" />
+          <Text TextId="IDT_ISM_CBE" Value="CBE20-PN-IO" />
+          <Text TextId="IDT_SS_IF_CBE" Value="X1400" />
+          <Text TextId="IDT_SS_P1_CBE" Value="X1400 P1" />
+          <Text TextId="IDT_SS_P2_CBE" Value="X1400 P2" />
+          <Text TextId="IDT_SS_P3_CBE" Value="X1400 P3" />
+          <Text TextId="IDT_SS_P4_CBE" Value="X1400 P4" />
+          <Text TextId="IDT_ISM_CU310" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU310" Value="X200" />
+          <Text TextId="IDT_SS_P1_CU310" Value="X200 P1" />
+          <Text TextId="IDT_SS_P2_CU310" Value="X201 P2" />
+        </Language>
+        <Language xml:lang="fr">
+          <Text TextId="IDT_MOD_NAME_EMPTY" Value="DO sans PZD" />
+          <Text TextId="IDT_MOD_INFO_EMPTY" Value="Objet entraînement (DO) sans PZD cyclique" />
+          <Text TextId="IDT_MOD_NAME_SERVO" Value="DO Servo" />
+          <Text TextId="IDT_MOD_INFO_SERVO" Value="Objet entraînement (DO) Servo" />
+          <Text TextId="IDT_MOD_NAME_CU" Value="DO Control Unit" />
+          <Text TextId="IDT_MOD_INFO_CU" Value="Objet entraînement (DO) Control Unit SINAMICS S" />
+          <Text TextId="IDT_SM_NAME_PAP" Value="Point Accès Paramètres" />
+          <Text TextId="IDT_SM_INFO_PAP" Value="Point d'accès aux paramètres de l'objet entraînement (DO)" />
+          <Text TextId="IDT_SM_NAME_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_INFO_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_NAME_EMPTY" Value="sous-module vide" />
+          <Text TextId="IDT_SM_INFO_EMPTY" Value="sous-module vide" />
+          <Text TextId="IDT_SM_NAME_NOSAFE" Value="sans PROFIsafe" />
+          <Text TextId="IDT_SM_INFO_NOSAFE" Value="sous-module vide" />
+          <Text TextId="IDT_SM_NAME_PS30" Value="PROFIsafe Télégr 30" />
+          <Text TextId="IDT_SM_INFO_PS30" Value="PROFIsafe Télégramme standard 30 : F-DI/DO longueur 2/2 octets" />
+          <Text TextId="IDT_DATAITEM_SAFETY_TRAILER" Value="Safety" />
+          <Text TextId="IDT_DATAITEM_SAFETY_INPUT" Value="Safety In" />
+          <Text TextId="IDT_DATAITEM_SAFETY_OUTPUT" Value="Safety Out" />
+          <Text TextId="IDT_SM_NAME_TEL1" Value="Télégramme standard 1, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL1" Value="Télégramme standard 1 : régulation de vitesse, longueur PZD 2/2 mots" />
+          <Text TextId="IDT_SM_NAME_TEL2" Value="Télégramme standard 2, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL2" Value="Télégramme standard 2 : régulation de vitesse, longueur PZD 4/4 mots" />
+          <Text TextId="IDT_SM_NAME_TEL3" Value="Télégramme standard 3, PZD-5/9" />
+          <Text TextId="IDT_SM_INFO_TEL3" Value="Télégramme standard 3 : régulation de vitesse plus 1 capteur de position, longueur PZD 5/9 mots" />
+          <Text TextId="IDT_SM_NAME_TEL4" Value="Télégramme standard 4, PZD-6/14" />
+          <Text TextId="IDT_SM_INFO_TEL4" Value="Télégramme standard 4 : régulation de vitesse plus 2 capteurs de position, longueur PZD 6/14 mots" />
+          <Text TextId="IDT_SM_NAME_TEL7" Value="Télégramme standard 7, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL7" Value="Télégramme standard 7 : positionnement, longueur PZD 2/2 mots" />
+          <Text TextId="IDT_SM_NAME_TEL9" Value="Télégramme standard 9, PZD-10/5" />
+          <Text TextId="IDT_SM_INFO_TEL9" Value="Télégramme standard 9 : positionnement, longueur PZD 10/5 mots" />
+          <Text TextId="IDT_SM_NAME_TEL102" Value="Télégramme SIEMENS 102, PZD-6/10" />
+          <Text TextId="IDT_SM_INFO_TEL102" Value="Télégramme SIEMENS 102 : régulation de vitesse avec réduction du couple, 1 capteur de position, longueur PZD 6/10 mots" />
+          <Text TextId="IDT_SM_NAME_TEL103" Value="Télégramme SIEMENS 103, PZD-7/15" />
+          <Text TextId="IDT_SM_INFO_TEL103" Value="Télégramme SIEMENS 103 : régulation de vitesse avec réduction du couple, 2 capteurs de position, longueur PZD 7/15 mots" />
+          <Text TextId="IDT_SM_NAME_TEL110" Value="Télégramme SIEMENS 110, PZD-12/7" />
+          <Text TextId="IDT_SM_INFO_TEL110" Value="Télégramme SIEMENS 110 : positionnement, longueur PZD 12/7 mots" />
+          <Text TextId="IDT_SM_NAME_TEL111" Value="Télégramme SIEMENS 111, PZD-12/12" />
+          <Text TextId="IDT_SM_INFO_TEL111" Value="Télégramme SIEMENS 111 : positionnement y comp. MDI, longueur PZD 12/12 mots" />
+          <Text TextId="IDT_SM_NAME_TEL390" Value="Télégramme SIEMENS 390, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL390" Value="Télégramme SIEMENS 390 pour périphérique IO, longueur PZD 2/2 mot" />
+          <Text TextId="IDT_SM_NAME_TEL391" Value="Télégramme SIEMENS 391, PZD-3/7" />
+          <Text TextId="IDT_SM_INFO_TEL391" Value="Télégramme SIEMENS 391 pour périphérique IO, 2 détecteurs, longueur PZD 3/7 mots" />
+          <Text TextId="IDT_SM_NAME_TEL392" Value="Télégramme SIEMENS 392, PZD-3/15" />
+          <Text TextId="IDT_SM_INFO_TEL392" Value="Télégramme SIEMENS 392 pour périphérique IO, 6 détecteurs, longueur PZD 3/15 mots" />
+          <Text TextId="IDT_SM_NAME_TEL393" Value="Télégramme SIEMENS 393, PZD-4/21" />
+          <Text TextId="IDT_SM_INFO_TEL393" Value="Télégramme SIEMENS 393 pour périphérique IO, 8 détecteurs, longueur PZD 4/21 mots" />
+          <Text TextId="IDT_SM_NAME_TEL394" Value="Télégramme SIEMENS 394, PZD-3/3" />
+          <Text TextId="IDT_SM_INFO_TEL394" Value="Télégramme SIEMENS 394 pour périphérique IO, longueur PZD 3/3 mot" />
+          <Text TextId="IDT_SM_NAME_TEL996" Value="Télégramme libre, PZD-4/4" />
+          <Text TextId="IDT_SM_INFO_TEL996" Value="Télégramme libre, longueur PZD 4/4 mots" />
+          <Text TextId="IDT_SM_NAME_TEL997" Value="Télégramme libre, PZD-8/8" />
+          <Text TextId="IDT_SM_INFO_TEL997" Value="Télégramme libre, longueur PZD 8/8 mots" />
+          <Text TextId="IDT_SM_NAME_TEL999" Value="Télégramme libre, PZD-16/16" />
+          <Text TextId="IDT_SM_INFO_TEL999" Value="Télégramme libre, longueur PZD 16/16 mots" />
+          <Text TextId="IDT_SM_NAME_TEL700" Value="Données additionnelles, canal d'informations Safety, PZD-0/3" />
+          <Text TextId="IDT_SM_INFO_TEL700" Value="Données additionnelles, canal d'informations Safety, longueur PZD 0/3 mots" />
+          <Text TextId="IDT_SM_NAME_TEL970" Value="Données additionnelles, PZD-2/2" />
+          <Text TextId="IDT_SM_INFO_TEL970" Value="Données additionnelles, longueur PZD 2/2 mots" />
+          <Text TextId="IDT_SM_NAME_TEL971" Value="Données additionnelles, PZD-2/4" />
+          <Text TextId="IDT_SM_INFO_TEL971" Value="Données additionnelles, longueur PZD 2/4 mots" />
+          <Text TextId="IDT_SM_NAME_TEL972" Value="Données additionnelles, PZD-2/6" />
+          <Text TextId="IDT_SM_INFO_TEL972" Value="Données additionnelles, longueur PZD 2/6 mots" />
+          <Text TextId="IDT_DATAITEM_ACTVAL" Value="Mot d'état ou mesure" />
+          <Text TextId="IDT_DATAITEM_REFVAL" Value="Mot de commande ou consigne" />
+          <Text TextId="IDT_FamilyDescription" Value="SINAMICS, la famille cohérente de variateurs à performance modulable, du modèle encastrable à la version en armoire, couvrant une gamme de puissance de 120 W à plusieurs MW" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" Value="SINAMICS S110 CU305 PN V4.4" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" Value="Périphérique IO SINAMICS S110 CU305 PN V4.4 avec interface PROFINET IO (temps réel, temps réel isochrone, communication acyclique, isochronisme, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" Value="SINAMICS S110 CU305 PN V4.4HF/SP3" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" Value="Périphérique IO SINAMICS S110 CU305 PN V4.4HF/SP3 avec interface PROFINET IO (temps réel, temps réel isochrone, communication acyclique, isochronisme, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_PORT1" Value="Port 1" />
+          <Text TextId="IDT_PORT2" Value="Port 2" />
+          <Text TextId="IDT_PORT3" Value="Port 3" />
+          <Text TextId="IDT_PORT4" Value="Port 4" />
+          <Text TextId="IDT_ISM_CU" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU" Value="X150" />
+          <Text TextId="IDT_SS_P1_CU" Value="X150 P1" />
+          <Text TextId="IDT_SS_P2_CU" Value="X150 P2" />
+          <Text TextId="IDT_ISM_CBE" Value="CBE20-PN-IO" />
+          <Text TextId="IDT_SS_IF_CBE" Value="X1400" />
+          <Text TextId="IDT_SS_P1_CBE" Value="X1400 P1" />
+          <Text TextId="IDT_SS_P2_CBE" Value="X1400 P2" />
+          <Text TextId="IDT_SS_P3_CBE" Value="X1400 P3" />
+          <Text TextId="IDT_SS_P4_CBE" Value="X1400 P4" />
+          <Text TextId="IDT_ISM_CU310" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU310" Value="X200" />
+          <Text TextId="IDT_SS_P1_CU310" Value="X200 P1" />
+          <Text TextId="IDT_SS_P2_CU310" Value="X201 P2" />
+        </Language>
+        <Language xml:lang="it">
+          <Text TextId="IDT_MOD_NAME_EMPTY" Value="DO senza PZD" />
+          <Text TextId="IDT_MOD_INFO_EMPTY" Value="Oggetto di azionamento (DO) senza PZD ciclico" />
+          <Text TextId="IDT_MOD_NAME_SERVO" Value="DO Servo" />
+          <Text TextId="IDT_MOD_INFO_SERVO" Value="Oggetto di azionamento (DO) Servo" />
+          <Text TextId="IDT_MOD_NAME_CU" Value="DO Control Unit" />
+          <Text TextId="IDT_MOD_INFO_CU" Value="Oggetto di azionamento (DO) Control Unit SINAMICS S" />
+          <Text TextId="IDT_SM_NAME_PAP" Value="Parameter Access Point" />
+          <Text TextId="IDT_SM_INFO_PAP" Value="Punto di accesso ai parametri dell'oggetto di azionamento (DO)" />
+          <Text TextId="IDT_SM_NAME_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_INFO_MAP" Value="Module Access Point" />
+          <Text TextId="IDT_SM_NAME_EMPTY" Value="Sottomodulo vuoto" />
+          <Text TextId="IDT_SM_INFO_EMPTY" Value="Sottomodulo vuoto" />
+          <Text TextId="IDT_SM_NAME_NOSAFE" Value="senza PROFIsafe" />
+          <Text TextId="IDT_SM_INFO_NOSAFE" Value="Sottomodulo vuoto" />
+          <Text TextId="IDT_SM_NAME_PS30" Value="Telegramma PROFIsafe 30" />
+          <Text TextId="IDT_SM_INFO_PS30" Value="Telegramma standard PROFIsafe 30: lunghezza F-DI/DO 2/2 byte" />
+          <Text TextId="IDT_DATAITEM_SAFETY_TRAILER" Value="Safety" />
+          <Text TextId="IDT_DATAITEM_SAFETY_INPUT" Value="Safety In" />
+          <Text TextId="IDT_DATAITEM_SAFETY_OUTPUT" Value="Safety Out" />
+          <Text TextId="IDT_SM_NAME_TEL1" Value="Telegramma standard 1, PZD 2/2" />
+          <Text TextId="IDT_SM_INFO_TEL1" Value="Telegramma standard 1: regolazione numero di giri, lunghezza PZD 2/2 parole" />
+          <Text TextId="IDT_SM_NAME_TEL2" Value="Telegramma standard 2, PZD 4/4" />
+          <Text TextId="IDT_SM_INFO_TEL2" Value="Telegramma standard 2: regolazione numero di giri, lunghezza PZD 4/4 parole" />
+          <Text TextId="IDT_SM_NAME_TEL3" Value="Telegramma standard 3, PZD 5/9" />
+          <Text TextId="IDT_SM_INFO_TEL3" Value="Telegramma standard 3: regolazione numero di giri più 1 encoder di posizione, lunghezza PZD 5/9 parole" />
+          <Text TextId="IDT_SM_NAME_TEL4" Value="Telegramma standard 4, PZD 6/14" />
+          <Text TextId="IDT_SM_INFO_TEL4" Value="Telegramma standard 4: regolazione numero di giri più 2 encoder di posizione, lunghezza PZD 6/14 parole" />
+          <Text TextId="IDT_SM_NAME_TEL7" Value="Telegramma standard 7, PZD 2/2" />
+          <Text TextId="IDT_SM_INFO_TEL7" Value="Telegramma standard 7: posizionamento, lunghezza PZD 2/2 parole" />
+          <Text TextId="IDT_SM_NAME_TEL9" Value="Telegramma standard 9, PZD 10/5" />
+          <Text TextId="IDT_SM_INFO_TEL9" Value="Telegramma standard 9: posizionamento, lunghezza PZD 10/5 parole" />
+          <Text TextId="IDT_SM_NAME_TEL102" Value="Telegramma SIEMENS 102, PZD 6/10" />
+          <Text TextId="IDT_SM_INFO_TEL102" Value="Telegramma SIEMENS 102: regolazione numero di giri con riduzione di coppia, 1 encoder di posizione, lunghezza PZD 6/10 parole" />
+          <Text TextId="IDT_SM_NAME_TEL103" Value="Telegramma SIEMENS 103, PZD 7/15" />
+          <Text TextId="IDT_SM_INFO_TEL103" Value="Telegramma SIEMENS 103: regolazione numero di giri con riduzione di coppia, 2 encoder di posizione, lunghezza PZD 7/15 parole" />
+          <Text TextId="IDT_SM_NAME_TEL110" Value="Telegramma SIEMENS 110, PZD 12/7" />
+          <Text TextId="IDT_SM_INFO_TEL110" Value="Telegramma SIEMENS 110: posizionamento, lunghezza PZD 12/7 parole" />
+          <Text TextId="IDT_SM_NAME_TEL111" Value="Telegramma SIEMENS 111, PZD 12/12" />
+          <Text TextId="IDT_SM_INFO_TEL111" Value="Telegramma SIEMENS 111: posizionamento incl. MDI, lunghezza PZD 12/12 parole" />
+          <Text TextId="IDT_SM_NAME_TEL390" Value="Telegramma SIEMENS 390, PZD 2/2" />
+          <Text TextId="IDT_SM_INFO_TEL390" Value="Telegramma SIEMENS 390 per Device-I/O, lunghezza PZD 2/2 parole" />
+          <Text TextId="IDT_SM_NAME_TEL391" Value="Telegramma SIEMENS 391, PZD 3/7" />
+          <Text TextId="IDT_SM_INFO_TEL391" Value="Telegramma SIEMENS 391 per Device-I/O, 2 tastatori di misura, lunghezza PZD 3/7 parole" />
+          <Text TextId="IDT_SM_NAME_TEL392" Value="Telegramma SIEMENS 392, PZD 3/15" />
+          <Text TextId="IDT_SM_INFO_TEL392" Value="Telegramma SIEMENS 392 per Device-I/O, 6 tastatori di misura, lunghezza PZD 3/15 parole" />
+          <Text TextId="IDT_SM_NAME_TEL393" Value="Telegramma SIEMENS 393, PZD 4/21" />
+          <Text TextId="IDT_SM_INFO_TEL393" Value="Telegramma SIEMENS 393 per Device-I/O, 8 tastatori di misura, lunghezza PZD 4/21 parole" />
+          <Text TextId="IDT_SM_NAME_TEL394" Value="Telegramma SIEMENS 394, PZD 3/3" />
+          <Text TextId="IDT_SM_INFO_TEL394" Value="Telegramma SIEMENS 394 per Device-I/O, lunghezza PZD 3/3 parole" />
+          <Text TextId="IDT_SM_NAME_TEL996" Value="Telegramma libero, PZD 4/4" />
+          <Text TextId="IDT_SM_INFO_TEL996" Value="Telegramma libero, lunghezza PZD 4/4 parole" />
+          <Text TextId="IDT_SM_NAME_TEL997" Value="Telegramma libero, PZD 8/8" />
+          <Text TextId="IDT_SM_INFO_TEL997" Value="Telegramma libero, lunghezza PZD 8/8 parole" />
+          <Text TextId="IDT_SM_NAME_TEL999" Value="Telegramma libero, PZD 16/16" />
+          <Text TextId="IDT_SM_INFO_TEL999" Value="Telegramma libero, lunghezza PZD 16/16 parole" />
+          <Text TextId="IDT_SM_NAME_TEL700" Value="Dati aggiuntivi, Safety Info Channel, PZD 0/3" />
+          <Text TextId="IDT_SM_INFO_TEL700" Value="Dati aggiuntivi, Safety Info Channel, lunghezza PZD 0/3 parole" />
+          <Text TextId="IDT_SM_NAME_TEL970" Value="Dati aggiuntivi, PZD 2/2" />
+          <Text TextId="IDT_SM_INFO_TEL970" Value="Dati aggiuntivi, lunghezza PZD 2/2 parole" />
+          <Text TextId="IDT_SM_NAME_TEL971" Value="Dati aggiuntivi, PZD 2/4" />
+          <Text TextId="IDT_SM_INFO_TEL971" Value="Dati aggiuntivi, lunghezza PZD 2/4 parole" />
+          <Text TextId="IDT_SM_NAME_TEL972" Value="Dati aggiuntivi, PZD 2/6" />
+          <Text TextId="IDT_SM_INFO_TEL972" Value="Dati aggiuntivi, lunghezza PZD 2/6 parole" />
+          <Text TextId="IDT_DATAITEM_ACTVAL" Value="Parola di stato o valore reale" />
+          <Text TextId="IDT_DATAITEM_REFVAL" Value="Parola di comando o valore di riferimento" />
+          <Text TextId="IDT_FamilyDescription" Value="SINAMICS, la famiglia di azionamenti omogenea con prestazioni scalabili, dall'apparecchio ad incasso fino all'apparecchio in armadio in un campo di potenza che va da 120 W fino a più MW" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4" Value="SINAMICS S110 CU305 PN V4.4" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4" Value="IO-Device SINAMICS S110 CU305 PN V4.4 con interfaccia IO PROFINET (comunicazione RT, IRT e aciclica, sincronismo di clock, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_DAP_NAME_V225_S110-CU305PN-V4.4HF" Value="SINAMICS S110 CU305 PN V4.4HF/SP3" />
+          <Text TextId="IDT_DAP_INFO_V225_S110-CU305PN-V4.4HF" Value="IO-Device SINAMICS S110 CU305 PN V4.4HF/SP3 con interfaccia IO PROFINET (comunicazione RT, IRT e aciclica, sincronismo di clock, PROFIsafe, Shared Device)" />
+          <Text TextId="IDT_PORT1" Value="Porta 1" />
+          <Text TextId="IDT_PORT2" Value="Porta 2" />
+          <Text TextId="IDT_PORT3" Value="Porta 3" />
+          <Text TextId="IDT_PORT4" Value="Porta 4" />
+          <Text TextId="IDT_ISM_CU" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU" Value="X150" />
+          <Text TextId="IDT_SS_P1_CU" Value="X150 P1" />
+          <Text TextId="IDT_SS_P2_CU" Value="X150 P2" />
+          <Text TextId="IDT_ISM_CBE" Value="CBE20-PN-IO" />
+          <Text TextId="IDT_SS_IF_CBE" Value="X1400" />
+          <Text TextId="IDT_SS_P1_CBE" Value="X1400 P1" />
+          <Text TextId="IDT_SS_P2_CBE" Value="X1400 P2" />
+          <Text TextId="IDT_SS_P3_CBE" Value="X1400 P3" />
+          <Text TextId="IDT_SS_P4_CBE" Value="X1400 P4" />
+          <Text TextId="IDT_ISM_CU310" Value="PN-IO" />
+          <Text TextId="IDT_SS_IF_CU310" Value="X200" />
+          <Text TextId="IDT_SS_P1_CU310" Value="X200 P1" />
+          <Text TextId="IDT_SS_P2_CU310" Value="X201 P2" />
+        </Language>
+      </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>
